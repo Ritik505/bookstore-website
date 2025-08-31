@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NCERT Books</title>
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <!-- Lenis Smooth Scroll Library -->
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.35/bundled/lenis.min.js"></script>
+
+  <!-- START: ADDED STYLES FOR HEADER ICONS -->
+  <style>
+    .header-contact-icons {
+      display: flex;
+      align-items: center;
+      gap: 15px; /* Space between the icons */
+      margin-left: 15px; /* Space between search bar and icons */
+    }
+
+    .header-contact-icons a {
+      line-height: 0; /* Prevents extra vertical space */
+    }
+
+    .header-contact-icons img {
+      height: 28px; /* A good size for header icons */
+      width: auto;
+      transition: transform 0.2s ease-in-out, opacity 0.2s ease;
+      opacity: 0.9;
+    }
+    
+    .header-contact-icons a:hover img {
+      transform: scale(1.1); /* Simple hover effect */
+      opacity: 1;
+    }
+  </style>
+  <!-- END: ADDED STYLES FOR HEADER ICONS -->
+
+</head>
+<body>
+  <!-- Accessibility Menu (Floating Button) -->
+  <div id="accessibility-menu" aria-label="Accessibility Options" tabindex="0"></div>
+  <!-- Sticky Header -->
+  <header class="site-header">
+    <div class="logo">NCERT Books</div>
+    <nav class="main-nav" aria-label="Main Navigation">
+      
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#" id="classesDropdown" aria-haspopup="true" aria-expanded="false">&nbsp; &nbsp;Classes</a>
+          <ul class="dropdown-menu" aria-label="Classes List" id="classesMenu">
+            <!-- JS will populate class links here -->
+          </ul>
+        </li>
+        <li><a href="#all-books">&nbsp; &nbsp;All Books</a></li>
+      </ul>
+    </nav>
+    <form class="search-bar" role="search" aria-label="Search Books">
+      <input type="search" id="globalSearch" placeholder="Search books..." aria-label="Search books">
+    </form>
+
+    <!-- START: ADDED WHATSAPP AND GMAIL ICONS -->
+    <div class="header-contact-icons">
+      <!-- 
+        IMPORTANT: Replace '911234567890' with your own WhatsApp number (including country code without '+').
+      -->
+      <a href="https://wa.me/9818966252" target="_blank" aria-label="Chat on WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo">
+      </a> &nbsp; &nbsp;
+      <!-- 
+        IMPORTANT: Replace 'contact@ncertbookstore.com' with your own email address.
+      -->
+      <a href="mailto:ncertbooks4you@gmail.com" aria-label="Send an Email">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail Logo">
+      </a>
+    </div>
+    <!-- END: ADDED WHATSAPP AND GMAIL ICONS -->
+
+  </header>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <a href="#featured-books" class="cta-btn">Explore NCERT Books</a>
+    </div>
+    <img src="Banner image.png" alt="NCERT Books Banner" class="hero-banner">
+  </section>
+  <p style="font-size: 2.1rem; color: wheat;  margin: 0.5rem auto 0.01rem; line-height: 1.6; text-align: center;"><b>Right books, right time, delivered to your doorstep</b></p>
+  <!-- Featured Books Section -->
+  <section id="featured-books" class="featured-books">
+    <h2>Featured Books</h2>
+    <div class="books-grid" id="featuredBooksGrid">
+      <!-- JS will populate featured books here -->
+    </div>
+  </section>
+  <!-- All Books Section -->
+  <section id="all-books" class="all-books">
+    <h2>All Books</h2>
+    <div class="filter-bar">
+      <label for="classFilter">Filter by Class:</label>
+      <select id="classFilter">
+        <option value="all">All Classes</option>
+        <!-- JS will populate class options here -->
+      </select>
+    </div>
+    <div class="books-grid" id="allBooksGrid">
+      <!-- JS will populate all books here -->
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-logo">NCERT Books</div>
+
+      <div class="footer-social">
+                        <h3>Contact</h3>
+                <p>
+                    <a href="mailto:ncertbooks4you@gmail.com" style="text-decoration: none; color: inherit;">
+                        📧 Email: ncertbooks4you@gmail.com
+                    </a>
+                </p>
+                <p>
+                    <a href="tel:+919818966252" style="text-decoration: none; color: inherit;">
+                        📞 Phone no.: +91 9818966252
+                    </a>
+                </p>
+                <p>
+                    <a href="https://wa.me/919818966252" target="_blank" style="text-decoration: none; color: inherit;">
+                        <i class="fab fa-whatsapp" style="font-size: 20px; color: #25D366;"></i>&nbsp;Chat Us
+                    </a>
+                </p>
+      </div>
+    </div>
+    <div class="footer-copy">&copy; 2025 NCERT Book Store. All rights reserved.</div>
+  </footer>
+  <!-- Main JS -->
+  <script src="assets/js/books.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/accessibility.js"></script>
+</body>
+</html>
